@@ -16,7 +16,8 @@ public class ResultsActivity extends Activity {
 		
 		TextView tView = (TextView)findViewById(R.id.textView1);
 		Intent intent = getIntent();
-		tView.setText("Your time: "+intent.getStringExtra("Time"));
+		tView.setText("Your time - "+intent.getStringExtra("Time"));
+		//tView.setTextAlignment(tView.TEXT_ALIGNMENT_CENTER);
 	}
 
 	@Override

@@ -27,6 +27,7 @@ import com.hariharaknarayanan.MemoryGame.UsefulFunctions.*;
 
 public class GameActivity extends Activity implements OnLayoutChangeListener, Runnable, OnClickListener {
 
+	private String level;
 	private int numCols;
 	private int numRows;
 	private Handler handler;
@@ -45,6 +46,8 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_game);
 		
+		Intent intent = getIntent();
+		this.level = intent.getStringExtra("Level");		
 		View v = (View) findViewById(R.id.tableLayout1);
 		v.addOnLayoutChangeListener(this);
 		
@@ -67,15 +70,12 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 				flagInt[i] = getResources().getIdentifier("f"+Integer.toString(i+1), "drawable", "com.hariharaknarayanan.MemoryGame");
 			}
 			
-			SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-			String level = sharedPref.getString(getString(R.string.levelpref), null);
-			
 			if(level == null || level.compareTo((getResources().getStringArray(R.array.level))[0]) == 0)
 			{
 				numCols = 3;
 				numRows = 4;
 			}
-			else if(level.compareTo((getResources().getStringArray(R.array.level))[0]) == 1)
+			else if(level.compareTo((getResources().getStringArray(R.array.level))[1]) == 0)
 			{
 				numCols = 4;
 				numRows = 5;
@@ -220,7 +220,7 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 		{
 			try
 			{
-				Thread.sleep(1000);
+				Thread.sleep(600);
 			}
 			catch (InterruptedException e)
 			{

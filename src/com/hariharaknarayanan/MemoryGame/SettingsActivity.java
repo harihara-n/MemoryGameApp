@@ -22,11 +22,7 @@ public class SettingsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
 		
-		Spinner spinner1 = (Spinner) findViewById(R.id.spinner1);
-		ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
-		        R.array.level, R.layout.spinner_textitems);
-		adapter1.setDropDownViewResource(android.R.layout.select_dialog_item);
-		spinner1.setAdapter(adapter1);
+		
 		
 		Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
 		ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
@@ -34,19 +30,7 @@ public class SettingsActivity extends Activity {
 		adapter2.setDropDownViewResource(android.R.layout.select_dialog_item);
 		spinner2.setAdapter(adapter2);
 		
-		spinner1.setOnItemSelectedListener(new OnItemSelectedListener() {
-		    @Override
-		    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-		    	level = (String) parentView.getItemAtPosition(position);
-		    }
-
-		    @Override
-		    public void onNothingSelected(AdapterView<?> parentView) {
-		        
-		    }
 		
-
-		});
 		
 		spinner2.setOnItemSelectedListener(new OnItemSelectedListener() {
 		    @Override
@@ -73,7 +57,8 @@ public class SettingsActivity extends Activity {
 	
 	public void saveSettings(View v)
 	{
-		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+		SharedPreferences sharedPref = getSharedPreferences("MEMORYFILE", 2); 
+		//SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 		SharedPreferences.Editor editor = sharedPref.edit();
 		editor.putString(getString(R.string.levelpref), level);
 		editor.putString(getString(R.string.soundpref), sound);

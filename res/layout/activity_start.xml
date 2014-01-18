@@ -11,67 +11,60 @@
 
 
 
+    
+
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:src="@drawable/world" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imageView1"
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/buttonbg"
-        android:gravity="center_vertical|center_horizontal|top"
-        android:minHeight="50dp"
-        android:onClick="onClickPlay"
-        android:text="Start"
-        android:textAlignment="center"
-        android:textColor="@color/bluecolor"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        android:typeface="serif"
-        android:width="130dp" />
-
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/buttonbg"
-        android:gravity="center_vertical|center_horizontal|top"
-        android:minHeight="50dp"
-        android:onClick="onSettingsClick"
-        android:text="Options"
-        android:textAlignment="center"
-        android:textColor="@color/bluecolor"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        android:typeface="serif"
-        android:width="140dp" />
 
     <Button
         android:id="@+id/Button02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/buttonbg"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView1"
+        android:background="@color/transparent"
         android:gravity="center_vertical|center_horizontal|top"
         android:minHeight="50dp"
-        android:text="About"
+        android:text="Leaderboard"
         android:textAlignment="center"
         android:textColor="@color/bluecolor"
         android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="normal"
+        android:width="130dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button1"
+        android:background="@color/transparent"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
+        android:background="@color/transparent"
+        android:gravity="left"
+        android:minHeight="50dp"
+        android:onClick="onClickPlay"
+        android:text="Start"
+        android:textAlignment="textStart"
+        android:textColor="@color/bluecolor"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:typeface="serif"
         android:width="130dp" />
 
 />
