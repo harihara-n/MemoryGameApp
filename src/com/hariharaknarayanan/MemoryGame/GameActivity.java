@@ -146,10 +146,14 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 			return;
 		}
 		
-		
 		int alreadyOpenedCard = openCard;
 		int imageAlreadyOpenedCard = cardToImage.get(alreadyOpenedCard);
 		int imageCurrentOpenedCard = cardToImage.get(cardId);
+		
+		if(cardId == alreadyOpenedCard) //Clicking again on open card - just return
+		{
+			return;
+		}
 		
 		ImageView viewAlreadyOpened = (ImageView)findViewById(alreadyOpenedCard);
 				
