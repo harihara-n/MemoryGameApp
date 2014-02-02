@@ -23,5 +23,9 @@
     <string name="mediumscorespref">com.hariharakrishnan.memorygame.mediumscores</string>
     <string name="hardscorespref">com.hariharakrishnan.memorygame.hardscores</string>
     <string name="title_activity_results">Memory Game Result</string>
+    <string name="title_activity_leaderboard">Memory Leaderboard</string>
+    <string name="easyhighscoresfile">EasyHighScoresFile</string>
+    <string name="medhighscoresfile">MedHighScoresFile</string>
+    <string name="hardhighscoresfile">HardHighScoresFile</string>
 
 </resources>

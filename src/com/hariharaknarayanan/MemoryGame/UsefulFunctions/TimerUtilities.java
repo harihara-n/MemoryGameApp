@@ -14,6 +14,18 @@ public class TimerUtilities {
 		return minValue + secsValue;
 	}
 	
+	public static String convertSecondsToMS(int seconds)
+	{
+		int secs = seconds%60;
+		int mins = seconds/60;
+		
+		String secsStr = String.valueOf(secs);
+		String minsStr = String.valueOf(mins);
+		
+		return (minsStr.concat(":")).concat(secsStr);
+		
+	}
+	
 	public static String incrementOne (String s)
 	{
 		String[] strArray = s.split(":");

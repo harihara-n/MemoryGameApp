@@ -24,7 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/tableLayout1"
-        android:text="back" />
+        android:text="back" 
+        android:onClick="goBackToStart"/>
 
     <TextView
         android:id="@+id/textView1"

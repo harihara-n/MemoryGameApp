@@ -179,6 +179,8 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 		{
 			Intent intent = new Intent(this, ResultsActivity.class);
 			intent.putExtra("Time", ((TextView)findViewById(R.id.textView1)).getText());
+			intent.putExtra("Level", level);
+			intent.putExtra("Finished", true);
 			startActivity(intent);
 		}
 	}
@@ -200,10 +202,19 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 		else
 		{
 			time = TimerUtilities.incrementOne(time);
-			timeView.setText(time);            
+			timeView.setText(time);      
+			Intent intent = new Intent(this, ResultsActivity.class);
+			intent.putExtra("Finished", true);
+			startActivity(intent);
         }
 		
 		
+	}
+	
+	public void goBackToStart(View v)
+	{
+		Intent intent = new Intent(this, StartActivity.class);
+		startActivity(intent);
 	}
 	
 	@Override
