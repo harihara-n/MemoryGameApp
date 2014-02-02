@@ -34,7 +34,9 @@ public class ResultsActivity extends Activity {
 		
 		if (!finished)
 		{
+			TextView tView2 = (TextView)findViewById(R.id.textView2);
 			tView.setText("Sorry. Time's up!");
+			tView2.setText("");
 		}
 		else
 		{		

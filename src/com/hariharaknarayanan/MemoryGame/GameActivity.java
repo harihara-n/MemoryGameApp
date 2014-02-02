@@ -40,6 +40,7 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 	HashMap<Integer, Integer> cardToImage = new HashMap<Integer, Integer>();
 	Integer openCard;
 	HashSet<Integer> finishedCards = new HashSet<Integer>();
+	private String timeLimit;
 			
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,21 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 		setContentView(R.layout.activity_game);
 		
 		Intent intent = getIntent();
-		this.level = intent.getStringExtra("Level");		
+		this.level = intent.getStringExtra("Level");
+		
+		if(this.level.compareTo("Easy") == 0)
+		{
+			this.timeLimit = getString(R.string.easyTimeLimit);
+		}
+		else if(this.level.compareTo("Medium") == 0)
+		{
+			this.timeLimit = getString(R.string.medTimeLimit);
+		}
+		else
+		{
+			this.timeLimit = getString(R.string.hardTimeLimit);
+		}
+		
 		View v = (View) findViewById(R.id.tableLayout1);
 		v.addOnLayoutChangeListener(this);
 		
@@ -192,7 +207,7 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 		String time = (String) timeView.getText();
 		//String time = "0:01";				
 		
-		if (TimerUtilities.convertMSToSeconds(time) < R.integer.TimeLimit) 
+		if (time.compareTo(this.timeLimit) < 0) 
 		{
 			time = TimerUtilities.incrementOne(time);
 			timeView.setText(time);
@@ -201,10 +216,10 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
         }
 		else
 		{
-			time = TimerUtilities.incrementOne(time);
-			timeView.setText(time);      
+			/*time = TimerUtilities.incrementOne(time);
+			timeView.setText(time);      */
 			Intent intent = new Intent(this, ResultsActivity.class);
-			intent.putExtra("Finished", true);
+			intent.putExtra("Finished", false);
 			startActivity(intent);
         }
 		

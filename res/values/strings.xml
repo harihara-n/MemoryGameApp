@@ -27,5 +27,8 @@
     <string name="easyhighscoresfile">EasyHighScoresFile</string>
     <string name="medhighscoresfile">MedHighScoresFile</string>
     <string name="hardhighscoresfile">HardHighScoresFile</string>
+    <string name="easyTimeLimit">3:00</string>
+    <string name="medTimeLimit">6:00</string>
+    <string name="hardTimeLimit">9:00</string>
 
 </resources>
