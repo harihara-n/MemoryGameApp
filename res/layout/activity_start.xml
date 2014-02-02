@@ -71,8 +71,9 @@
         android:id="@+id/spinner1"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignRight="@+id/imageView1"
         android:layout_marginBottom="28dp"
         android:background="@color/transparent"
         android:textAlignment="center" />

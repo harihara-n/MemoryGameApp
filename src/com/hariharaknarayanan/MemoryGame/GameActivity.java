@@ -37,7 +37,7 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 	private int numFlags = 30;
 	private Integer[] flagInt = new Integer[numFlags];
 	
-	private int layoutBorder = 10;
+	private int layoutBorder = 20;
 	
 	HashMap<Integer, Integer> cardToImage = new HashMap<Integer, Integer>();
 	Integer openCard;
