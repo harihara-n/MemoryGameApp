@@ -37,6 +37,8 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 	private int numFlags = 30;
 	private Integer[] flagInt = new Integer[numFlags];
 	
+	private int layoutBorder = 10;
+	
 	HashMap<Integer, Integer> cardToImage = new HashMap<Integer, Integer>();
 	Integer openCard;
 	HashSet<Integer> finishedCards = new HashSet<Integer>();
@@ -105,8 +107,8 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 			
 			TableLayout tLayout = (TableLayout)findViewById(R.id.tableLayout1);
 					
-			int tRowHeight = tLayout.getHeight()/numRows;
-			int tColWidth = tLayout.getWidth()/numCols;
+			int tRowHeight = (tLayout.getHeight() - layoutBorder)/numRows;
+			int tColWidth = (tLayout.getWidth() - layoutBorder)/numCols;
 			
 			LayoutParams lP = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 					
