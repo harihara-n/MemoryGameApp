@@ -64,11 +64,12 @@ public final class R {
         public static final int f8=0x7f02001e;
         public static final int f9=0x7f02001f;
         public static final int flag=0x7f020020;
-        public static final int ic_launcher=0x7f020021;
-        public static final int spinner_bg=0x7f020022;
-        public static final int tick=0x7f020023;
-        public static final int world=0x7f020024;
-        public static final int worldoutlinemap=0x7f020025;
+        public static final int flagsicon=0x7f020021;
+        public static final int ic_launcher=0x7f020022;
+        public static final int spinner_bg=0x7f020023;
+        public static final int tick=0x7f020024;
+        public static final int world=0x7f020025;
+        public static final int worldoutlinemap=0x7f020026;
     }
     public static final class id {
         public static final int Button01=0x7f0b0007;
