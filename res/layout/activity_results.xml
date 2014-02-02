@@ -19,7 +19,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold" 
         android:gravity="center"
-        android:textAlignment="center"/>"
+        android:textAlignment="center"
+        android:typeface="serif"/>"
 
     <Button
         android:id="@+id/button1"
@@ -42,6 +43,7 @@
         android:text="Congratulations!"
         android:textAppearance="?android:attr/textAppearanceLarge" 
         android:textColor="@color/bluecolor"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:typeface="serif" />
 
 </RelativeLayout>
