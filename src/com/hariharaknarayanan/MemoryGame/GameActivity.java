@@ -273,6 +273,13 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 		
 	}
 
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		handler.removeCallbacks(this);
+		super.onDestroy();
+	}
+
 	
 		
 }
