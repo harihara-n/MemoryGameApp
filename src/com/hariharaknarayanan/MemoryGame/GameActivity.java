@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.util.AttributeSet;
 import android.view.Menu;
 import android.view.View;
@@ -271,5 +272,7 @@ public class GameActivity extends Activity implements OnLayoutChangeListener, Ru
 		}	
 		
 	}
+
+	
 		
 }

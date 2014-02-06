@@ -28,7 +28,11 @@
         </activity>
         <activity
             android:name="com.hariharaknarayanan.MemoryGame.GameActivity"
-            android:label="@string/title_activity_game" >
+            android:label="@string/title_activity_game" 
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            >
+            
         </activity>
         <activity
             android:name="com.hariharaknarayanan.MemoryGame.ResultsActivity"
